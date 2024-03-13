@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceJungle.App", "VoiceJungle.App\VoiceJungle.App.csproj", "{AD45B866-4B6D-4005-B869-980BE5AE5452}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceJungle.CMS", "VoiceJungle.CMS.csproj", "{682A912D-C41B-4CF6-9071-EF2065421ACE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AD45B866-4B6D-4005-B869-980BE5AE5452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD45B866-4B6D-4005-B869-980BE5AE5452}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD45B866-4B6D-4005-B869-980BE5AE5452}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD45B866-4B6D-4005-B869-980BE5AE5452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{682A912D-C41B-4CF6-9071-EF2065421ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682A912D-C41B-4CF6-9071-EF2065421ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682A912D-C41B-4CF6-9071-EF2065421ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682A912D-C41B-4CF6-9071-EF2065421ACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0DAC0E41-E8CD-44DE-B16A-C2589232CC9D}
+		SolutionGuid = {E28CD9AA-0E91-448F-ACB4-45F8E7A135D9}
 	EndGlobalSection
 EndGlobal
