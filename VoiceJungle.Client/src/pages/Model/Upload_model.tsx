@@ -1,7 +1,11 @@
+import React from 'react';
+import { Button} from 'antd';
 function Upload_model(){
     return (
         <div>
-            UPPPPPPPPPPP_MMMMModel
+            <Button type="primary">Choose model</Button>
+            <br/>
+            <Button type="primary">Upload</Button>
         </div>
     )
 }
