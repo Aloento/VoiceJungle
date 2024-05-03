@@ -32,6 +32,7 @@ const InfoCard: React.FC<{
         flex: 1,
       }}
     >
+
       <div
         style={{
           display: 'flex',
