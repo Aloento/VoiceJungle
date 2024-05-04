@@ -1,5 +1,6 @@
 "use client";
 
+import { Line, Liquid } from "@ant-design/charts";
 import { ProCard, Statistic, StatisticCard } from "@ant-design/pro-components";
 
 function Dashboard() {
@@ -55,9 +56,22 @@ function Dashboard() {
         <StatisticCard
           title="Traffic Trend"
           chart={
-            <img
-              src="https://gw.alipayobjects.com/zos/alicdn/_dZIob2NB/zhuzhuangtu.svg"
-              width="100%"
+            <Line
+              width={600}
+              yField={"value"}
+              xField={"date"}
+              data={[
+                { date: "2023-06-23", value: 3 },
+                { date: "2023-06-24", value: 4 },
+                { date: "2023-06-25", value: 3.5 },
+                { date: "2023-06-26", value: 5 },
+                { date: "2023-06-27", value: 4.9 },
+                { date: "2023-06-28", value: 6 },
+                { date: "2023-06-29", value: 7 },
+                { date: "2023-06-30", value: 9 },
+              ]}
+              point={{ shapeField: "square", sizeField: 4 }}
+              interaction={{ tooltip: false }}
             />
           }
         />
@@ -66,10 +80,14 @@ function Dashboard() {
       <StatisticCard
         title="Traffic Usage"
         chart={
-          <img
-            src="https://gw.alipayobjects.com/zos/alicdn/qoYmFMxWY/jieping2021-03-29%252520xiawu4.32.34.png"
-            alt="大盘"
-            width="100%"
+          <Liquid
+            width={600}
+            percent={0.3}
+            style={{
+              outlineBorder: 4,
+              outlineDistance: 8,
+              waveLength: 128,
+            }}
           />
         }
       />
