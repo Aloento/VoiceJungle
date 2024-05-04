@@ -1,62 +1,59 @@
 "use client";
 
-import { ProCard, StatisticCard } from "@ant-design/pro-components";
-
-const { Statistic } = StatisticCard;
+import { ProCard, Statistic, StatisticCard } from "@ant-design/pro-components";
 
 function Dashboard() {
   return (
-    <ProCard
-      title="数据概览"
-      extra="2019年9月28日 星期五"
-      headerBordered
-      bordered
-    >
+    <ProCard bordered ghost>
       <ProCard split="horizontal">
         <ProCard split="horizontal">
           <ProCard split="vertical">
             <StatisticCard
               statistic={{
-                title: '昨日全部流量',
+                title: "Yesterday's Full Traffic",
                 value: 234,
                 description: (
                   <Statistic
-                    title="较本月平均流量"
+                    title="Average traffic for the month"
                     value="8.04%"
                     trend="down"
                   />
                 ),
               }}
             />
+
             <StatisticCard
               statistic={{
-                title: '本月累计流量',
+                title: "Cumulative Traffic for the Month",
                 value: 234,
                 description: (
-                  <Statistic title="月同比" value="8.04%" trend="up" />
+                  <Statistic title="Month-over-month" value="8.04%" trend="up" />
                 ),
               }}
             />
           </ProCard>
+
           <ProCard split="vertical">
             <StatisticCard
               statistic={{
-                title: '运行中实验',
-                value: '12/56',
-                suffix: '个',
+                title: "Running Experiment",
+                value: "12/56",
+                suffix: "unit",
               }}
             />
+
             <StatisticCard
               statistic={{
-                title: '历史实验总数',
-                value: '134',
-                suffix: '个',
+                title: "Total Historical Experiments",
+                value: "134",
+                suffix: "unit",
               }}
             />
           </ProCard>
         </ProCard>
+
         <StatisticCard
-          title="流量走势"
+          title="Traffic Trend"
           chart={
             <img
               src="https://gw.alipayobjects.com/zos/alicdn/_dZIob2NB/zhuzhuangtu.svg"
@@ -65,8 +62,9 @@ function Dashboard() {
           }
         />
       </ProCard>
+
       <StatisticCard
-        title="流量占用情况"
+        title="Traffic Usage"
         chart={
           <img
             src="https://gw.alipayobjects.com/zos/alicdn/qoYmFMxWY/jieping2021-03-29%252520xiawu4.32.34.png"
