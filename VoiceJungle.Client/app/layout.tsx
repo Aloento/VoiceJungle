@@ -16,21 +16,15 @@ function RootLayout({ children }: React.PropsWithChildren) {
         <ConfigProvider theme={{ cssVar: true, hashed: false }}>
           <body>
             <Layout className="h-screen">
-              {SideMenu()}
+              <SideMenu />
 
               <Layout>
-                <Header style={{ padding: 0 }} className="!bg-slate-200" />
+                <Header className="!bg-white" />
 
                 <Content style={{ margin: '24px 16px 0' }}>
-                  <div
-                    className="!bg-slate-200 rounded-md"
-                    style={{
-                      padding: 24,
-                      minHeight: 360,
-                    }}
-                  >
+                  <main className="!bg-white rounded-md p-6 min-h-96">
                     {children}
-                  </div>
+                  </main>
                 </Content>
               </Layout>
             </Layout>

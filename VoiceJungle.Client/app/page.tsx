@@ -1,10 +1,10 @@
 
-function Home() {
+function Dashboard() {
   return (
     <div>
-      123
+      Dashboard
     </div>
   );
 }
 
-export default Home;
+export default Dashboard;

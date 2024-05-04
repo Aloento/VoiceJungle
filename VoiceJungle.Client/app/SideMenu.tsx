@@ -1,6 +1,7 @@
-import { DashboardOutlined, ExperimentOutlined } from "@ant-design/icons";
+import { AppstoreAddOutlined, CodeOutlined, DashboardOutlined, ExperimentOutlined, HddOutlined } from "@ant-design/icons";
 import { Menu } from "antd";
 import Sider from "antd/es/layout/Sider";
+import Link from "next/link";
 
 export function SideMenu() {
   return (
@@ -22,7 +23,10 @@ export function SideMenu() {
         theme="light"
         mode="inline"
         items={[
-          { key: "1", label: "Dashboard", icon: <DashboardOutlined /> },
+          { key: 1, label: <Link href="/">Dashboard</Link>, icon: <DashboardOutlined /> },
+          { key: 2, label: <Link href="/Dataset">Dataset</Link>, icon: <HddOutlined /> },
+          { key: 3, label: <Link href="/Task">Task</Link>, icon: <CodeOutlined /> },
+          { key: 4, label: <Link href="/Model">Model</Link>, icon: <AppstoreAddOutlined /> },
         ]}
         defaultSelectedKeys={["1"]}
       />
