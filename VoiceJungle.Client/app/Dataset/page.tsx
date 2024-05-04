@@ -149,7 +149,7 @@ function Dataset() {
 
         return request<{
           data: GithubIssueItem[];
-        }>('', {
+        }>('https://proapi.azurewebsites.net/github/issues', {
           params,
         });
       }}
