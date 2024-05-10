@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/VoiceJungle.TTS.iml" filepath="$PROJECT_DIR$/VoiceJungle.TTS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/VoiceJungle.TTS.iml" filepath="$PROJECT_DIR$/.idea/VoiceJungle.TTS.iml" />
     </modules>
   </component>
 </project>
