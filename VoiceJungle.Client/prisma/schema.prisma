@@ -12,4 +12,36 @@ model Dataset {
   workDir   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  Task      Task[]
+}
+
+model Task {
+  id           Int      @id @default(autoincrement())
+  currentEpoch Int
+  targetEpoch  Int
+  status       String
+  createdAt    DateTime @default(now())
+  datasetId    Int
+  dataset      Dataset  @relation(fields: [datasetId], references: [id])
+  Log          Log[]
+  Model        Model[]
+}
+
+model Log {
+  id        Int      @id @default(autoincrement())
+  message   String
+  createdAt DateTime @default(now())
+  taskId    Int
+  task      Task     @relation(fields: [taskId], references: [id])
+}
+
+model Model {
+  id        Int      @id @default(autoincrement())
+  name      String
+  path      String
+  logPath   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  Task      Task     @relation(fields: [taskId], references: [id])
+  taskId    Int
 }
