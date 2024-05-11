@@ -20,7 +20,7 @@ function RootLayout({ children }: React.PropsWithChildren) {
 
               <Layout>
                 <Header className="!bg-white flex justify-end">
-                  123
+
                 </Header>
 
                 <Content className="pt-6 px-4">
