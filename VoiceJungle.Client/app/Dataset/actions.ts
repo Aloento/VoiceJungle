@@ -27,7 +27,7 @@ export async function getDataset(id: number) {
   return data;
 }
 
-export async function addDataset(name: string, workDir: string) {
+export async function addDataset(workDir: string) {
   const wavsPath = path.join(workDir, 'wavs');
   const metadataPath = path.join(workDir, 'metadata.csv');
 

@@ -22,7 +22,7 @@ function Dataset() {
 
   const add = async () => {
     try {
-      await addDataset("LJSpeech", newWorkDir);
+      await addDataset(newWorkDir);
       message.success('Dataset added successfully');
       setIsModalVisible(false);
     } catch (error: any) {
