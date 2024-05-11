@@ -6,7 +6,7 @@ import { useMount } from "ahooks";
 import { Button, Input, Modal, message } from "antd";
 import Link from "next/link";
 import { useState } from "react";
-import { addDataset, listDatasets } from "./actions";
+import { addDataset, deleteDataset, listDatasets } from "./actions";
 
 function Dataset() {
   const [data, setData] = useState<any[]>([]);
@@ -25,8 +25,20 @@ function Dataset() {
       await addDataset(newWorkDir);
       message.success('Dataset added successfully');
       setIsModalVisible(false);
+      setNewWorkDir('');
+      refresh();
     } catch (error: any) {
       message.error(`Failed to add dataset: ${error.message}`);
+    }
+  };
+
+  const del = async (id: number) => {
+    try {
+      await deleteDataset(id);
+      message.success('Dataset deleted successfully');
+      refresh();
+    } catch (error: any) {
+      message.error(`Failed to delete dataset: ${error.message}`);
     }
   };
 
@@ -48,6 +60,15 @@ function Dataset() {
         <Link href={`/Dataset/${record.id}`}>
           <Button>View</Button>
         </Link>
+      ),
+    },
+    {
+      title: "Delete",
+      key: "delete",
+      render: (_: any, record: any) => (
+        <Button danger onClick={() => del(record.id)}>
+          Delete
+        </Button>
       ),
     }
   ];

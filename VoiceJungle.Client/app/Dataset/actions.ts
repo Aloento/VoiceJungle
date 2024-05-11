@@ -43,3 +43,11 @@ export async function addDataset(workDir: string) {
 
   return dataset;
 }
+
+export async function deleteDataset(id: number) {
+  await prisma.dataset.delete({
+    where: {
+      id,
+    },
+  });
+}
