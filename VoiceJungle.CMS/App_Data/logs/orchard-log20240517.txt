@@ -1,0 +1,8 @@
+2024-05-17 13:14:39.4415|Default||0HN3MBSU7TIMP:000001EB|OrchardCore.DisplayManagement.DisplayManager|ERR|IDisplayDriver`1 thrown from OrchardCore.Workflows.Drivers.ForkTaskDisplayDriver by NullReferenceException
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at OrchardCore.Workflows.Drivers.ForkTaskDisplayDriver.UpdateActivity(ForkTaskViewModel model, ForkTask activity)
+   at OrchardCore.Workflows.Display.ActivityDisplayDriver`2.UpdateActivityAsync(TEditViewModel model, TActivity activity)
+   at OrchardCore.Workflows.Display.ActivityDisplayDriver`2.UpdateAsync(TActivity model, IUpdateModel updater)
+   at OrchardCore.DisplayManagement.DisplayManager`1.<>c.<<UpdateEditorAsync>b__7_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at OrchardCore.Modules.InvokeExtensions.InvokeAsync[TEvents,T1,T2](IEnumerable`1 events, Func`4 dispatch, T1 arg1, T2 arg2, ILogger logger)
