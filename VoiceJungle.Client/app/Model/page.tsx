@@ -1,7 +1,9 @@
 "use client";
 
+import { PlusOutlined } from "@ant-design/icons";
 import { ProTable } from "@ant-design/pro-components";
 import { useMount } from "ahooks";
+import { Button } from "antd";
 import { useState } from "react";
 import { listModels } from "./actions";
 
@@ -55,6 +57,11 @@ function Model() {
       columns={columns}
       dataSource={models}
       rowKey="id"
+      toolBarRender={() => [
+        <Button type="primary" onClick={() => { }}>
+          <PlusOutlined /> Import Model
+        </Button>,
+      ]}
     />
   );
 }

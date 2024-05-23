@@ -1,5 +1,6 @@
 "use client";
 
+import { PlusOutlined } from "@ant-design/icons";
 import { ProTable } from "@ant-design/pro-components";
 import { useMount } from "ahooks";
 import { Button } from "antd";
@@ -63,6 +64,11 @@ function Task() {
       columns={columns}
       dataSource={data}
       rowKey="id"
+      toolBarRender={() => [
+        <Button type="primary" onClick={() => { }}>
+          <PlusOutlined /> New Task
+        </Button>,
+      ]}
     />
   );
 }
