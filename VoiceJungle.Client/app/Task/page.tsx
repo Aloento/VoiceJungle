@@ -1,14 +1,15 @@
+"use client";
+
 import { ProTable } from "@ant-design/pro-components";
 import { useMount } from "ahooks";
 import { Button } from "antd";
 import { useState } from "react";
+import { getTaskList } from "./actions";
 
 function Task() {
   const [data, setData] = useState<any[]>([]);
 
-  useMount(() => {
-    fetchData();
-  });
+  useMount(() => fetchData());
 
   const fetchData = async () => {
     const result = await getTaskList();

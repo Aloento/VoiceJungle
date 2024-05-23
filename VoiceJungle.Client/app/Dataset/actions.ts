@@ -1,11 +1,9 @@
 "use server";
 
-import { PrismaClient } from "@prisma/client";
 import fs from "fs";
 import { parse } from "papaparse";
 import path from "path";
-
-const prisma = new PrismaClient();
+import { prisma } from "../Shared";
 
 export async function listDatasets() {
   return await prisma.dataset.findMany();
