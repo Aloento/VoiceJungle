@@ -4,7 +4,7 @@ import { ProTable } from "@ant-design/pro-components";
 import { useMount } from "ahooks";
 import { Button } from "antd";
 import { useState } from "react";
-import { getTaskList } from "./actions";
+import { listTasks } from "./actions";
 
 function Task() {
   const [data, setData] = useState<any[]>([]);
@@ -12,7 +12,7 @@ function Task() {
   useMount(() => fetchData());
 
   const fetchData = async () => {
-    const result = await getTaskList();
+    const result = await listTasks();
     setData(result);
   };
 
@@ -24,13 +24,18 @@ function Task() {
     },
     {
       title: 'Dataset',
-      dataIndex: 'dataset',
+      dataIndex: 'datasetId',
       key: 'dataset',
     },
     {
-      title: 'Epochs',
-      dataIndex: 'epochs',
-      key: 'epochs',
+      title: 'CurrentEpoch',
+      dataIndex: 'currentEpoch',
+      key: 'currentEpoch',
+    },
+    {
+      title: 'TargetEpoch',
+      dataIndex: 'targetEpoch',
+      key: 'targetEpoch',
     },
     {
       title: 'Status',
